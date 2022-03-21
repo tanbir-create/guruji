@@ -1,0 +1,12 @@
+.footer-cont {
+  width: 92%;
+  height: 50px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  display: flex;
+}

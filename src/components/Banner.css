@@ -1,0 +1,43 @@
+.bannertext-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.bannertext-container .img-cont {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.bannertext-container .img-cont img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.bannertext-container h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-top: -20px;
+  margin-bottom: 3px;
+  color: rgb(36, 87, 36);
+}
+
+.bannertext-container h3 {
+  font-size: 1.5rem;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: #000;
+}
+
+.bannertext-container p {
+  font-size: 1.2rem;
+  margin-top: 0px;
+  color: #000;
+}

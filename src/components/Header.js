@@ -10,10 +10,7 @@ import astro from "./images/astro.png";
 const Header = () => {
   return (
     <>
-      <AppBar
-        position="static"
-        sx={{ backgroundColor: "rgb(75, 129, 75);", height: 90 }}
-      >
+      <AppBar position="static" sx={{ backgroundColor: "#7AC88B", height: 90 }}>
         <Toolbar>
           {/* <Typography
             variant="h4"

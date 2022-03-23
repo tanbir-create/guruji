@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(4),
+    paddingTop: theme.spacing(9),
   },
   title: {
     paddingBottom: theme.spacing(3),

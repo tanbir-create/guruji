@@ -7,7 +7,7 @@
 }
 
 .catogary-submenu li {
-  background: rgb(75, 129, 75);
+  background: #7ac88b;
   cursor: pointer;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .catogary-submenu li a:hover {
-  background: rgba(223, 217, 217, 0.603);
+  background: #a7deb1;
 }
 
 .catogary-submenu.clicked {

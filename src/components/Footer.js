@@ -10,8 +10,8 @@ const Footer = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "rgb(74, 109, 109)",
-          marginTop: "35px",
+          background: "#3E604E",
+          marginTop: "75px",
         }}
       >
         <div className="footer-cont">
@@ -19,10 +19,22 @@ const Footer = () => {
             <div className="logo-cont">
               <img src="./images/logo.png" />
             </div>
-            <div></div>
+            <div className="title">Guruji Ved</div>
           </div>
-          <div></div>
-          <div></div>
+          <ul>
+            <li>About Us</li>
+            <li>Our Mission</li>
+            <li>How it work</li>
+            <li>Our Team</li>
+            <li>Contact Us</li>
+          </ul>
+          <ul>
+            <li>Skin</li>
+            <li>Hair</li>
+            <li>Men Care</li>
+            <li>Women Care</li>
+            <li>Diabetes</li>
+          </ul>
         </div>
       </div>
     </>

@@ -11,7 +11,7 @@ const Footer = () => {
           alignItems: "center",
           justifyContent: "center",
           background: "#3E604E",
-          marginTop: "75px",
+          marginTop: "0",
         }}
       >
         <div className="footer-cont">

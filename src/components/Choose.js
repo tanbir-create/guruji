@@ -8,6 +8,8 @@ import Grid from "@mui/material/Grid";
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(9),
+    background: "#E6F5E9",
+    paddingBottom: 65,
   },
   title: {
     paddingBottom: theme.spacing(3),
@@ -17,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     height: "150px",
     borderRadius: "50%",
-    marginBottom: "15px",
+    marginBottom: 0,
   },
   fea: {
     width: "150px",
@@ -76,7 +78,11 @@ const Choose = () => {
           <Grid item xs={12} sm={6} md={3} className={classes.roundContainer}>
             <Box className={classes.roundDiv}>
               <Box className={classes.round}>
-                <img className={classes.fea} src="./images/money-back.png" />
+                <img
+                  className={classes.fea}
+                  src="./images/money-back.png"
+                  style={{ background: "#9AD7A6" }}
+                />
               </Box>
               <Typography variant="h6">Money Back </Typography>
             </Box>

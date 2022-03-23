@@ -74,9 +74,15 @@ class Cards extends PureComponent {
   render() {
     return (
       <>
-        <Grid container spacing={3}>
+        <Grid container spacing={3} sx={{ backgroundColor: "#E6F5E9" }}>
           {this.state.tableData.map((tdata, i) => (
-            <Grid item xs={12} sm={6} md={3} sx={{ padding: 10, height: 450 }}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={3}
+              sx={{ padding: 10, height: 450, background: "#E6F5E9" }}
+            >
               <div className="card-container">
                 <div className="img-container">
                   <img src={astro} />
@@ -84,7 +90,7 @@ class Cards extends PureComponent {
                 <div className="text-container">
                   <div className="top">
                     <span>Date:</span>
-                    <span>Tag/Catogary</span>
+                    <span>Tag/Category</span>
                   </div>
                   <div className="bottom">
                     <h4>Lorem</h4>

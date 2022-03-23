@@ -14,6 +14,8 @@ import { referData } from "../../src/data";
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(9),
+    background: "#E6F5E9",
+    marginBottom: 0,
   },
   title: {
     paddingBottom: theme.spacing(3),
@@ -125,7 +127,7 @@ const Blog = (props) => {
               <Link to="/">Popular</Link>
             </li>
             <li className="nav-item" onClick={catgClick}>
-              <Link to="/">Catogary</Link>
+              <Link to="/">Category</Link>
               <span>&gt;</span>
               {catgdown && <Dropdown onFilterItem={filterCatogary} />}
             </li>

@@ -121,6 +121,8 @@ nav {
   justify-content: center;
   list-style: none;
   outline: none;
+  padding-bottom: 26px;
+  margin-bottom: 0;
 }
 .pagination > .active > a {
   background-color: #47ccde;

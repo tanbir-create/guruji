@@ -1,4 +1,4 @@
-/* @media (max-width: 512px) {
+@media (max-width: 512px) {
   #header-logo {
     margin-left: -28px;
   }
@@ -26,4 +26,4 @@
   .head-btn:hover {
     padding: 0 5px;
   }
-} */
+}

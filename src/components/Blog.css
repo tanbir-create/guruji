@@ -164,6 +164,12 @@ nav {
 
 /* responsive style */
 
+@media (max-width: 1030px) {
+  .card-container {
+    width: 100%;
+  }
+}
+
 @media (max-width: 952px) {
   #nav-items {
     width: 85%;
@@ -182,8 +188,21 @@ nav {
   }
 }
 
+@media (max-width: 600px) {
+  .card-container {
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @media (max-width: 450px) {
   #nav-item a {
     font-size: 1rem;
+  }
+
+  .card-container {
+    margin-left: 55px;
   }
 }

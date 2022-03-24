@@ -9,6 +9,7 @@ const Dropdown = (props) => {
   return (
     <>
       <ul
+        id="catogary-submenu"
         className={dropdown ? "catogary-submenu clicked" : "catogary-submenu"}
         onClick={() => setDropdown(!dropdown)}
       >

@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import { NavLink } from "react-router-dom";
 import { Box } from "@mui/material";
 import astro from "./images/astro.png";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -21,6 +22,8 @@ const Header = () => {
             News
           </Typography> */}
           <Box
+            id="header-logo"
+            className="header-logo"
             sx={{
               flexGrow: 1,
               width: 85,
@@ -29,7 +32,7 @@ const Header = () => {
           >
             <NavLink to="/">
               <img
-                src="./images/logo.png"
+                src="./images/guruji.png"
                 style={{ width: 85, height: 85, cursor: "pointer" }}
               />
             </NavLink>
@@ -37,6 +40,7 @@ const Header = () => {
           <NavLink to="/">
             <Button
               className="head-btn"
+              id="home-btn"
               sx={{
                 color: "white",
                 textTransform: "capitalize",
@@ -53,6 +57,7 @@ const Header = () => {
           <NavLink to="/blog">
             <Button
               className="head-btn"
+              id="blog-btn"
               sx={{
                 color: "white",
                 textTransform: "capitalize",
@@ -69,6 +74,7 @@ const Header = () => {
           <NavLink to="/blog">
             <Button
               className="head-btn"
+              id="about-btn"
               sx={{
                 color: "white",
                 textTransform: "capitalize",
@@ -85,6 +91,7 @@ const Header = () => {
           <NavLink to="/blog">
             <Button
               className="head-btn"
+              id="contact-btn"
               sx={{
                 color: "white",
                 textTransform: "capitalize",

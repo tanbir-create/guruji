@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="logo-cont">
               <img src="./images/logo.png" />
             </div>
-            <div className="title">Guruji Ved</div>
+            <div className="title">Guruji Veda</div>
           </div>
           <ul>
             <li>About Us</li>

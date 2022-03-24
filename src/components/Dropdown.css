@@ -35,3 +35,13 @@
 /* .submenu-item:hover {
   background: rgb(0, 175, 175);
 } */
+
+@media (max-width: 800px) {
+  .catogary-submenu {
+    width: 10rem;
+  }
+
+  #catogary-submenu li a {
+    font-size: 1rem;
+  }
+}

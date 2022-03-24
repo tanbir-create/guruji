@@ -83,7 +83,7 @@ const Blog = (props) => {
           Blogs
         </Typography>
         <nav className="blogNav">
-          <ul className="nav-items">
+          <ul id="nav-items" className="nav-items">
             {/* {navItems.map((item) => {
               if (item.title === "Catogary") {
                 return (
@@ -120,20 +120,28 @@ const Blog = (props) => {
                 </li>
               );
             })} */}
-            <li className="nav-item" onClick={() => setItems(referData)}>
+            <li
+              id="nav-item"
+              className="nav-item"
+              onClick={() => setItems(referData)}
+            >
               <Link to="/">Most Recent</Link>
             </li>
-            <li className="nav-item" onClick={() => filterItem("priority")}>
+            <li
+              id="nav-item"
+              className="nav-item"
+              onClick={() => filterItem("priority")}
+            >
               <Link to="/">Popular</Link>
             </li>
-            <li className="nav-item" onClick={catgClick}>
+            <li id="nav-item" className="nav-item" onClick={catgClick}>
               <Link to="/">Category</Link>
-              <span>&gt;</span>
+              {/* <span>&gt;</span> */}
               {catgdown && <Dropdown onFilterItem={filterCatogary} />}
             </li>
-            <li className="nav-item" onClick={tabClick}>
+            <li id="nav-item" className="nav-item" onClick={tabClick}>
               <Link to="/">Tabs</Link>
-              <span>&gt;</span>
+              {/* <span>&gt;</span> */}
               {tabdown && <Dropdown onFilterItem={filterCatogary} />}
             </li>
           </ul>

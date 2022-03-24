@@ -20,11 +20,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "50%",
     marginBottom: "15px",
     background: "#EAFFEA",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   fea: {
-    width: "150px",
-    height: "150px",
-    borderRadius: "50%",
+    width: "100px",
+    height: "100px",
   },
   roundContainer: {
     alignItems: "center",
@@ -45,7 +47,7 @@ const Feature = () => {
   const classes = useStyles();
   return (
     <>
-      <Container maxWidth="xl" className={classes.container}>
+      <Container maxWidth="" className={classes.container}>
         <Typography
           variant="h4"
           className={classes.title}
@@ -61,12 +63,11 @@ const Feature = () => {
         >
           <Grid item xs={12} sm={6} md={3} className={classes.roundContainer}>
             <Box className={classes.roundDiv}>
-              <Box className={classes.round} sx={{ background: "#AEDFB7" }}>
-                <img
-                  className={classes.fea}
-                  src="./images/shop.png"
-                  style={{ background: "#AEDFB7" }}
-                />
+              <Box
+                className={classes.round}
+                sx={{ background: "#AEDFB7 !important" }}
+              >
+                <img className={classes.fea} src="./images/shop.png" />
               </Box>
               <Typography variant="h6">Shop</Typography>
             </Box>

@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    width: "100%",
     position: "relative",
     display: "flex",
     justifyContent: "flex-start",
@@ -28,7 +27,7 @@ const Banner = () => {
       <Box className={classes.hero}>
         <div className="bannertext-container">
           <div className="img-cont">
-            <img src="./images/logo.png" />
+            <img src="./images/guruji.png" />
           </div>
           <h1>GURUJI VEDA</h1>
           <h3>

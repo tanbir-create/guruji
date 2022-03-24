@@ -12,6 +12,7 @@
   display: flex;
   list-style: none;
   text-align: center;
+  flex-wrap: nowrap;
   width: 70vw;
   justify-content: space-between;
 }
@@ -19,6 +20,7 @@
 .nav-item {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   height: 8vh;
 }
 
@@ -44,7 +46,7 @@
 }
 
 .card-container {
-  width: 300px;
+  width: 95%;
   height: 380px;
   /* background-color: red; */
   margin: 2rem;
@@ -114,6 +116,10 @@ nav {
   margin-top: 50px;
 }
 
+/* nav li {   
+  border-radius: 50%;
+}  */
+
 .pagination {
   margin: 25px auto;
   display: flex;
@@ -154,4 +160,30 @@ nav {
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
   border-radius: unset;
+}
+
+/* responsive style */
+
+@media (max-width: 952px) {
+  #nav-items {
+    width: 85%;
+  }
+}
+
+@media (max-width: 800px) {
+  #nav-items {
+    width: 100%;
+  }
+
+  #nav-item a {
+    font-size: 1.2rem;
+    margin-left: -40px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 450px) {
+  #nav-item a {
+    font-size: 1rem;
+  }
 }

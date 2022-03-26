@@ -22,8 +22,8 @@
 }
 
 .popular-topic-cont .pop-card {
-  width: 99%;
-  height: 120px;
+  width: 370px;
+  /* height: 120px; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -35,18 +35,24 @@
 
 .pop-card .pop-left {
   width: 60%;
-  height: 90px;
+  /* height: 90px; */
 }
 
 .pop-left h4 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-top: 18px;
   margin-bottom: 0;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+.pop-left h4 span,
+.pop-left h5 span {
+  font-size: 1rem;
+  font-family: sans-serif;
 }
 
 .pop-left h5 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 5px;
 }
 
@@ -169,7 +175,7 @@
   padding: 6px 0;
   margin: auto;
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
 }
 
 .interest-cont .pagination {
@@ -179,5 +185,5 @@
 .interest-cont h3 {
   margin-left: 3rem;
   font-size: 1.5rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 2rem;
 }

@@ -5,11 +5,13 @@ import Cards from "../components/Cards";
 import { useParams } from "react-router-dom";
 import { referData } from "../data";
 import axios from "axios";
+import PopularTopics from "../components/PopularTopics";
 
 const Topic = (props) => {
   const [blog, setBlog] = useState();
   const [relatedPost, setRelatedPost] = useState([]);
   const { id } = useParams();
+  console.log(id);
 
   useEffect(() => {
     if (id) {
@@ -46,36 +48,7 @@ const Topic = (props) => {
   return (
     <>
       <div className="main">
-        <div className="popular-topic-cont">
-          <h3>Popular topics</h3>
-          <div className="pop-card">
-            <div className="pop-left">
-              <h4>Title:</h4>
-              <h5>Date:</h5>
-            </div>
-            <div className="pop-right">
-              <img src={astro} />
-            </div>
-          </div>
-          <div className="pop-card">
-            <div className="pop-left">
-              <h4>Title:</h4>
-              <h5>Date:</h5>
-            </div>
-            <div className="pop-right">
-              <img src={astro} />
-            </div>
-          </div>
-          <div className="pop-card">
-            <div className="pop-left">
-              <h4>Title:</h4>
-              <h5>Date:</h5>
-            </div>
-            <div className="pop-right">
-              <img src={astro} />
-            </div>
-          </div>
-        </div>
+        <PopularTopics />
         <div className="blog-detail">
           <h1>{blog && blog.title}</h1>
           <div className="blog-img">

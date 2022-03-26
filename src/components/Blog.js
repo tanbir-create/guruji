@@ -181,7 +181,7 @@ const Blog = (props) => {
         {/* cards */}
         {console.log(items)}
         {/* {console.log(items[1].createdAt)} */}
-        <Cards card={props.card} data={items} />
+        {items.length > 0 && <Cards card={props.card} data={items} />}
       </div>
     </>
   );

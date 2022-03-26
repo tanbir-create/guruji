@@ -4,10 +4,11 @@ import { Container, Grid } from "@mui/material";
 import astro from "./images/astro.png";
 import { Link } from "react-router-dom";
 import { referData } from "../data";
+import axios from "axios";
 
 class Cards extends PureComponent {
   constructor(props) {
-    console.log(props);
+    console.log("props", props);
     super(props);
 
     this.state = {
@@ -49,13 +50,11 @@ class Cards extends PureComponent {
   }
 
   componentDidMount() {
+    console.log("mount");
     this.getData();
   }
 
   getData() {
-    // axios
-    //     .get('https://jsonplaceholder.typicode.com/users')
-    //     .then(res => {
     const data = this.props.data;
     console.log(data);
 
@@ -69,15 +68,36 @@ class Cards extends PureComponent {
       orgtableData: this.props.data,
       tableData: slice,
     });
-    // })
   }
+
+  // getData() {
+  //   axios
+  //     .get(
+  //       "https://3l41sc9lla.execute-api.ap-south-1.amazonaws.com/production/all"
+  //     )
+  //     .then((res) => {
+  //       const data = res.data;
+  //       console.log(res.data);
+
+  //       const slice = data.slice(
+  //         this.state.offset,
+  //         this.state.offset + this.state.perPage
+  //       );
+
+  //       this.setState({
+  //         pageCount: Math.ceil(data.length / this.state.perPage),
+  //         orgtableData: data,
+  //         tableData: data,
+  //       });
+  //     });
+  // }
   render() {
     return (
       <>
-        {/* color-#E6F5E9 */}
         <Grid container spacing={3} sx={{ backgroundColor: "#E6F5E9" }}>
           {this.state.tableData.map((tdata, i) => (
             <Grid
+              key={i}
               item
               xs={12}
               sm={6}
@@ -85,7 +105,6 @@ class Cards extends PureComponent {
               xl={3}
               sx={{
                 padding: 10,
-                height: 450,
                 background: "#E6F5E9",
               }}
             >
@@ -95,12 +114,12 @@ class Cards extends PureComponent {
                 </div>
                 <div className="text-container">
                   <div className="top">
-                    <span>Date:</span>
-                    <span>Tag/Category</span>
+                    <span>Date: {this.props.data[i].createdAt}</span>
+                    <span>{this.props.data[i].category}</span>
                   </div>
                   <div className="bottom">
-                    <h4>Lorem</h4>
-                    <p>{tdata.desc}</p>
+                    <h4>{this.props.data[i].title}</h4>
+                    <p>{this.props.data[i].description.substring(0, 50)} ...</p>
                   </div>
                   <Link to={`/topic/${tdata.id}`}>
                     <div>Read More</div>

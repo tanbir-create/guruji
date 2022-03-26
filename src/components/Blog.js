@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { navItems } from "./NavItems";
@@ -10,6 +10,7 @@ import astro from "./images/astro.png";
 import { red } from "@mui/material/colors";
 import Cards from "./Cards";
 import { referData } from "../../src/data";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -24,10 +25,41 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Blog = (props) => {
-  const [items, setItems] = useState(referData);
+  const [items, setItems] = useState([]);
   const [catgdown, setCatgdown] = useState(false);
   const [tabdown, setTabdown] = useState(false);
   const classes = useStyles();
+
+  useEffect(() => {
+    loadBlogsData();
+    loadPopularData();
+  }, []);
+
+  const loadBlogsData = async () => {
+    const response = await axios.get(
+      "https://3l41sc9lla.execute-api.ap-south-1.amazonaws.com/production/all"
+    );
+    if (response.status === 200) {
+      console.log(response.data);
+      setItems(response.data);
+    } else {
+      console.log("Something went wrong");
+    }
+  };
+
+  const loadPopularData = async () => {
+    const response = await axios.get(
+      "https://3l41sc9lla.execute-api.ap-south-1.amazonaws.com/production/blogs/popularity"
+    );
+    if (response.status === 200) {
+      console.log(response.data);
+      setItems(response.data);
+    } else {
+      console.log("Something went wrong");
+    }
+  };
+
+  // console.log("items", items);
 
   function catgClick() {
     if (catgdown === false) {
@@ -74,7 +106,7 @@ const Blog = (props) => {
   return (
     <>
       {console.log(items)}
-      <div maxWidth="xl" className={classes.container}>
+      <div maxwidth="xl" className={classes.container}>
         <Typography
           variant="h4"
           className={classes.title}
@@ -123,14 +155,14 @@ const Blog = (props) => {
             <li
               id="nav-item"
               className="nav-item"
-              onClick={() => setItems(referData)}
+              onClick={() => loadBlogsData()}
             >
               <Link to="/">Most Recent</Link>
             </li>
             <li
               id="nav-item"
               className="nav-item"
-              onClick={() => filterItem("priority")}
+              onClick={() => loadPopularData()}
             >
               <Link to="/">Popular</Link>
             </li>
@@ -147,6 +179,8 @@ const Blog = (props) => {
           </ul>
         </nav>
         {/* cards */}
+        {console.log(items)}
+        {/* {console.log(items[1].createdAt)} */}
         <Cards card={props.card} data={items} />
       </div>
     </>

@@ -1,14 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Topic.css";
 import astro from "../components/images/astro.png";
 import Cards from "../components/Cards";
 import { useParams } from "react-router-dom";
 import { referData } from "../data";
+import axios from "axios";
 
 const Topic = (props) => {
+  const [blog, setBlog] = useState();
+  const [relatedPost, setRelatedPost] = useState([]);
   const { id } = useParams();
-  const getData = referData[id - 1];
-  console.log(getData);
+
+  useEffect(() => {
+    if (id) {
+      getSingleBlog();
+    }
+  }, [id]);
+
+  const getSingleBlog = async () => {
+    const response = await axios.get(
+      `https://3l41sc9lla.execute-api.ap-south-1.amazonaws.com/production/blog/${id}`
+    );
+    const relatedPostData = await axios.get(
+      `https://3l41sc9lla.execute-api.ap-south-1.amazonaws.com/production/blogs/category/${response.data.category}`
+    );
+    if (response.status === 200 || relatedPostData.status === 200) {
+      setBlog(response.data);
+      setRelatedPost(relatedPostData.data);
+    } else {
+      console.log("Something went wrong");
+    }
+  };
+
+  const handleLike = async () => {
+    const response = await axios.post(
+      `https://3l41sc9lla.execute-api.ap-south-1.amazonaws.com/production/blog/${id}/like`
+    );
+    if (response.status === 200) {
+      console.log("like successful");
+    } else {
+      console.log("Something went wrong");
+    }
+  };
+
   return (
     <>
       <div className="main">
@@ -43,14 +77,12 @@ const Topic = (props) => {
           </div>
         </div>
         <div className="blog-detail">
-          <h1>
-            Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam c
-          </h1>
+          <h1>{blog && blog.title}</h1>
           <div className="blog-img">
-            <img src={astro} />
+            <img src={astro} alt="" />
           </div>
-          <p>{getData.desc}</p>
-          <p>
+          <p>{blog && blog.description}</p>
+          {/* <p>
             Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam
             condimentum tempus diam, Lorem ipsum dolor sit amet, consec tetur
             adipiscing elit. Nam condimentum tempus diam, Lorem ipsum dolor sit
@@ -59,9 +91,9 @@ const Topic = (props) => {
             condimentum tempus diam, Lorem ipsum dolor sit amet, consec tetur
             adipiscing elit. Nam condimentum tempus diam, Lorem ipsum dolor sit
             amet, consec tetur adipiscing elit. Nam condimentum tempus diam,{" "}
-          </p>
+          </p> */}
           <div className="btn">
-            <button>Like</button>
+            <button onClick={handleLike}>Like</button>
             <button>Comment</button>
             <button>Share</button>
           </div>
@@ -104,10 +136,12 @@ const Topic = (props) => {
       </div>
 
       {/* interesting topic section */}
-      <div className="interest-cont">
-        <h3>Topics might intrust you</h3>
-        <Cards card={props.card} data={referData} />
-      </div>
+      {relatedPost && relatedPost.length > 0 && (
+        <div className="interest-cont">
+          <h3>Topics might intrust you</h3>
+          <Cards card={props.card} data={relatedPost} />
+        </div>
+      )}
     </>
   );
 };

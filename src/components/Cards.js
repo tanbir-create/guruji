@@ -131,11 +131,31 @@ class Cards extends PureComponent {
                       ...
                     </p>
                   </div>
-                  <Link to={`/topic/${this.state.orgtableData[i]._id}`}>
+                  {/* <Link to={`/topic/${this.state.orgtableData[i]._id}`}>
                     <div>Read More</div>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
+              <Link
+                to={`/topic/${this.state.orgtableData[i]._id}`}
+                style={{ textAlign: "end" }}
+              >
+                <div
+                  id="read-btn"
+                  style={{
+                    marginTop: -15,
+                    width: 91,
+                    textAlign: "center",
+                    marginLeft: 200,
+                    padding: "6px 10px",
+                    color: "rgba(0, 0, 0, 0.7)",
+                    fontWeight: 600,
+                    fontFamily: "sans-serif",
+                  }}
+                >
+                  Read More
+                </div>
+              </Link>
             </Grid>
           ))}
         </Grid>

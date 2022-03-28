@@ -115,12 +115,38 @@
   margin-bottom: -12px;
 }
 
+#read-btn:hover {
+  background-color: #7ac88b;
+  border-radius: 50px;
+  color: white !important;
+}
+
 /* Pagination style */
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+}
+
+.pagination .previous.disabled a,
+.pagination .next.disabled a {
+  border-radius: 50px;
+  margin: 0 0.9rem;
+  /* background-color: green; */
+  border: 2px solid #90d29d;
+  color: #222222;
+  font-weight: 500;
+}
+
+.pagination .previous.disabled a:hover,
+.pagination .next.disabled a:hover {
+  background-color: #90d29d;
+}
+
+.pagination .active a {
+  border-radius: 50%;
+  padding: 6px 14px;
 }
 
 /* nav li {   
@@ -138,12 +164,13 @@ nav {
   margin-bottom: 0;
 }
 .pagination > .active > a {
-  background-color: #47ccde;
-  border-color: #47ccde;
-  color: #fff;
+  background-color: #90d29d;
+  border-color: #90d29d;
+  color: black;
+  font-weight: 600;
 }
 .pagination > li > a {
-  border: 1px solid #47ccde;
+  border: 1px solid #90d29d;
   padding: 5px 10px;
   outline: none;
   cursor: pointer;
@@ -154,13 +181,13 @@ nav {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #47ccde;
-  border-color: #47ccde;
+  background-color: #90d29d;
+  border-color: #90d29d;
   outline: none;
 }
 .pagination > li > a,
 .pagination > li > span {
-  color: #47ccde;
+  color: #90d29d;
 }
 .pagination > li:first-child > a,
 .pagination > li:first-child > span,

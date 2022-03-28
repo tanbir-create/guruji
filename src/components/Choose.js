@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     width: "150px",
     height: "150px",
     borderRadius: "50%",
-    marginBottom: 0,
+    marginBottom: 25,
   },
   fea: {
     width: "150px",
@@ -61,7 +61,10 @@ const Choose = () => {
         >
           <Grid item xs={12} sm={6} md={3} className={classes.roundContainer}>
             <Box className={classes.roundDiv}>
-              <Box className={classes.round}>
+              <Box
+                className={classes.round}
+                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.1)" }}
+              >
                 <img className={classes.fea} src="./images/expert.png" />
               </Box>
               <Typography variant="h6">Our Experts</Typography>
@@ -69,7 +72,10 @@ const Choose = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3} className={classes.roundContainer}>
             <Box className={classes.roundDiv}>
-              <Box className={classes.round}>
+              <Box
+                className={classes.round}
+                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.1)" }}
+              >
                 <img className={classes.fea} src="./images/satisfied.png" />
               </Box>
               <Typography variant="h6">2 Million Satisfied Users</Typography>
@@ -81,7 +87,10 @@ const Choose = () => {
                 <img
                   className={classes.fea}
                   src="./images/money-back.png"
-                  style={{ background: "#9AD7A6" }}
+                  style={{
+                    background: "#9AD7A6",
+                    boxShadow: "0 15px 10px 10px rgba(125,125,125,0.3)",
+                  }}
                 />
               </Box>
               <Typography variant="h6">Money Back </Typography>
@@ -89,7 +98,10 @@ const Choose = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3} className={classes.roundContainer}>
             <Box className={classes.roundDiv}>
-              <Box className={classes.round}>
+              <Box
+                className={classes.round}
+                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.1)" }}
+              >
                 <img className={classes.fea} src="./images/certified.png" />
               </Box>
               <Typography variant="h6">Certified Doctors</Typography>

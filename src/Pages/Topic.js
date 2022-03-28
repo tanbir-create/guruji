@@ -55,16 +55,7 @@ const Topic = (props) => {
             <img src={astro} alt="" />
           </div>
           <p>{blog && blog.description}</p>
-          {/* <p>
-            Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam
-            condimentum tempus diam, Lorem ipsum dolor sit amet, consec tetur
-            adipiscing elit. Nam condimentum tempus diam, Lorem ipsum dolor sit
-            amet, consec tetur adipiscing elit. Nam condimentum tempus diam,
-            Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Nam
-            condimentum tempus diam, Lorem ipsum dolor sit amet, consec tetur
-            adipiscing elit. Nam condimentum tempus diam, Lorem ipsum dolor sit
-            amet, consec tetur adipiscing elit. Nam condimentum tempus diam,{" "}
-          </p> */}
+
           <div className="btn">
             <button onClick={handleLike}>Like</button>
             <button>Comment</button>
@@ -109,12 +100,14 @@ const Topic = (props) => {
       </div>
 
       {/* interesting topic section */}
-      {relatedPost && relatedPost.length > 0 && (
-        <div className="interest-cont">
-          <h3>Topics might intrust you</h3>
-          <Cards card={props.card} data={relatedPost} />
-        </div>
-      )}
+      {relatedPost &&
+        relatedPost.length > 0 &&
+        relatedPost.filter((item) => item._id != id) && (
+          <div className="interest-cont">
+            <h3>Topics might intrust you</h3>
+            <Cards card={props.card} data={relatedPost} />
+          </div>
+        )}
     </>
   );
 };

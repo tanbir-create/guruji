@@ -65,7 +65,10 @@ const Feature = () => {
             <Box className={classes.roundDiv}>
               <Box
                 className={classes.round}
-                sx={{ background: "#AEDFB7 !important" }}
+                sx={{
+                  background: "#AEDFB7 !important",
+                  boxShadow: "0 15px 10px 10px rgba(125,125,125,0.3)",
+                }}
               >
                 <img className={classes.fea} src="./images/shop.png" />
               </Box>
@@ -74,7 +77,10 @@ const Feature = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3} className={classes.roundContainer}>
             <Box className={classes.roundDiv}>
-              <Box className={classes.round}>
+              <Box
+                className={classes.round}
+                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.1)" }}
+              >
                 <img className={classes.fea} src="./images/consult.png" />
               </Box>
               <Typography variant="h6">Consultancy</Typography>
@@ -82,7 +88,10 @@ const Feature = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3} className={classes.roundContainer}>
             <Box className={classes.roundDiv}>
-              <Box className={classes.round}>
+              <Box
+                className={classes.round}
+                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.1)" }}
+              >
                 <img className={classes.fea} src="./images/live.png" />
               </Box>
               <Typography variant="h6">Live Session</Typography>
@@ -90,7 +99,10 @@ const Feature = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3} className={classes.roundContainer}>
             <Box className={classes.roundDiv}>
-              <Box className={classes.round}>
+              <Box
+                className={classes.round}
+                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.1)" }}
+              >
                 <img className={classes.fea} src="./images/blog.png" />
               </Box>
               <Typography variant="h6">Blog</Typography>

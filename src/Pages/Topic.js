@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { referData } from "../data";
 import axios from "axios";
 import PopularTopics from "../components/PopularTopics";
+import ReactMarkdown from "react-markdown";
 
 const Topic = (props) => {
   const [blog, setBlog] = useState();
@@ -55,9 +56,12 @@ const Topic = (props) => {
             <img src={astro} alt="" />
           </div>
           <p>{blog && blog.description}</p>
+          <ReactMarkdown className="file">
+            {blog && blog.markdown}
+          </ReactMarkdown>
 
           <div className="btn">
-            <button onClick={handleLike}>Like</button>
+            <button onClick={() => handleLike()}>Like</button>
             <button>Comment</button>
             <button>Share</button>
           </div>

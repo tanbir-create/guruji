@@ -88,7 +88,7 @@ const Header = () => {
               About Us
             </Button>
           </NavLink>
-          <NavLink to="/blog">
+          <NavLink to="/ayurveda">
             <Button
               className="head-btn"
               id="contact-btn"
@@ -102,7 +102,7 @@ const Header = () => {
                 textDecoration: "none",
               }}
             >
-              Contact Us
+              Ayurveda
             </Button>
           </NavLink>
         </Toolbar>

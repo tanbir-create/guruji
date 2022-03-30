@@ -1,0 +1,149 @@
+/* banner style */
+.about-banner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: red;
+  padding: 25px 0;
+  margin-top: 75px;
+}
+
+.about-banner .left {
+  width: 48%;
+  background-color: yellow;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-banner .left div {
+  width: 48%;
+  background-color: green;
+}
+
+.about-banner .left .top {
+  margin-bottom: 20px;
+}
+
+.about-banner .right {
+  width: 45%;
+  background-color: yellow;
+}
+
+/* aboutus style */
+
+.about-us-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.about-us-text p {
+  width: 90%;
+  text-align: center;
+}
+
+hr {
+  width: 80%;
+  height: 2px;
+  background-color: black;
+}
+
+/* why choose */
+.about-choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.about-choose .img-container {
+  width: 80%;
+  background-color: red;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-choose .img-container .cont {
+  width: 40%;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-choose .img-container .top {
+  margin-bottom: 55px;
+}
+
+.about-choose .img-container .cont .img-cont {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-choose .img-container .cont .img-cont img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* what user says */
+.user-review-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-review-cont h2 {
+  margin-top: 75px;
+}
+
+.user-review-cont .review-cards-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user-review-cont .review-cards-cont .review-cards {
+  width: 80%;
+  height: 400px;
+  background-color: blue !important;
+}
+
+.user-review-cont .review-cards-cont .review-text {
+  background-color: pink;
+  padding: 6px 16px;
+  border: 1px solid;
+  margin-top: 55px;
+  margin-bottom: 25px;
+}
+
+/* aboutus video */
+.about-us-video {
+  width: 100%;
+  background-color: red;
+  padding: 60px 0;
+}
+
+.about-us-video .video-container {
+  width: 100%;
+  height: 500px;
+  background-color: aqua;
+  margin-bottom: 125px;
+}

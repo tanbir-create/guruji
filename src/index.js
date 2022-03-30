@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
+import "swiper/css/bundle";
 
 ReactDOM.render(
   <React.StrictMode>

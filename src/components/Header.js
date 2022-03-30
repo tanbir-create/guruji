@@ -26,14 +26,14 @@ const Header = () => {
             className="header-logo"
             sx={{
               flexGrow: 1,
-              width: 85,
-              height: 85,
+              width: 120,
+              height: 120,
             }}
           >
             <NavLink to="/">
               <img
                 src="./images/guruji.png"
-                style={{ width: 85, height: 85, cursor: "pointer" }}
+                style={{ width: 120, height: 120, cursor: "pointer" }}
               />
             </NavLink>
           </Box>
@@ -71,7 +71,7 @@ const Header = () => {
               Blogs
             </Button>
           </NavLink>
-          <NavLink to="/blog">
+          <NavLink to="/about">
             <Button
               className="head-btn"
               id="about-btn"

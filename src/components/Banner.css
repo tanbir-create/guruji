@@ -5,7 +5,7 @@
   align-items: flex-start;
   justify-content: center;
   margin-left: 40px;
-  margin-top: -9rem;
+  margin-top: -1rem;
 }
 
 .bannertext-container .img-cont {
@@ -44,6 +44,38 @@
   margin-top: 0px;
   color: rgb(135, 206, 29);
   z-index: 20;
+  margin-bottom: 120px;
+}
+
+/* social icon style */
+
+.bannertext-container .social-container h3 {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  color: #5b9738;
+}
+
+.social-container .social-icons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.social-icons div {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #61a23b;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons img {
+  color: white;
+  width: 15px;
+  height: 15px;
 }
 
 /* responsive style */

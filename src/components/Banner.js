@@ -4,8 +4,9 @@ import { makeStyles } from "@mui/styles";
 import "./Banner.css";
 
 const useStyles = makeStyles((theme) => ({
+  // `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
   hero: {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/banner.jpg')`,
+    backgroundImage: " url('./images/banner.png')",
     height: "600px",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -25,7 +26,7 @@ const Banner = () => {
   return (
     <>
       <Box className={classes.hero}>
-        <div className="bannertext-container">
+        {/* <div className="bannertext-container">
           <div className="img-cont">
             <img src="./images/guruji.png" />
           </div>
@@ -38,7 +39,18 @@ const Banner = () => {
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
           </p>
-        </div>
+          <div className="social-container">
+            <h3>WWW.vcare.com</h3>
+            <div className="social-icons">
+              <div>
+                <img src="./images/facebook.png" alt="facebook-icon" />
+              </div>
+              <div>
+                <img src="./images/instagram.png" alt="instagram-icon" />
+              </div>
+            </div>
+          </div>
+        </div> */}
       </Box>
     </>
   );

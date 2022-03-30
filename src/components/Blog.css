@@ -157,12 +157,22 @@ nav {
   margin: 25px auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   list-style: none;
   outline: none;
   padding-bottom: 26px;
   margin-bottom: 0;
 }
+
+/* #d5eedb */
+
+.pagination .disabled > a {
+  color: #e7f7e9 !important;
+  background-color: #e7f7e9 !important;
+  border-color: #e7f7e9 !important;
+  cursor: default !important;
+}
+
 .pagination > .active > a {
   background-color: #90d29d;
   border-color: #90d29d;

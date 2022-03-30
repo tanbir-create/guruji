@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   fea: {
-    width: "100px",
-    height: "100px",
+    width: "160px",
+    height: "160px",
   },
   roundContainer: {
     alignItems: "center",
@@ -66,11 +66,15 @@ const Feature = () => {
               <Box
                 className={classes.round}
                 sx={{
-                  background: "#AEDFB7 !important",
+                  // background: "#AEDFB7 !important",
                   boxShadow: "0 15px 10px 10px rgba(125,125,125,0.3)",
                 }}
               >
-                <img className={classes.fea} src="./images/shop.png" />
+                <img
+                  className={classes.fea}
+                  src="./images/shop.png"
+                  style={{ width: 220, height: 220, marginTop: 62 }}
+                />
               </Box>
               <Typography variant="h6">Shop</Typography>
             </Box>
@@ -79,7 +83,7 @@ const Feature = () => {
             <Box className={classes.roundDiv}>
               <Box
                 className={classes.round}
-                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.1)" }}
+                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.3)" }}
               >
                 <img className={classes.fea} src="./images/consult.png" />
               </Box>
@@ -90,7 +94,7 @@ const Feature = () => {
             <Box className={classes.roundDiv}>
               <Box
                 className={classes.round}
-                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.1)" }}
+                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.3)" }}
               >
                 <img className={classes.fea} src="./images/live.png" />
               </Box>
@@ -101,7 +105,7 @@ const Feature = () => {
             <Box className={classes.roundDiv}>
               <Box
                 className={classes.round}
-                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.1)" }}
+                sx={{ boxShadow: "3px 4px 1px 1px rgba(0,0,0,0.3)" }}
               >
                 <img className={classes.fea} src="./images/blog.png" />
               </Box>

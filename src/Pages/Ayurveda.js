@@ -5,13 +5,29 @@ const Ayurveda = () => {
   return (
     <>
       <div className="ayurveda-container">
-        <div className="search-filter-container">ki</div>
+        <div className="search-filter-container">
+          <div>
+            <select className="sorting">
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+          <div>ki</div>
+          <div>jj</div>
+        </div>
         <div className="doc-profile-container">
+          {/* card */}
           <div className="card">
             <div className="top">
               <div className="left">
                 <div className="img-cont">
-                  <img src="" alt="image" />
+                  <img src="./images/expert.png" alt="image" />
                 </div>
                 <div className="rating">4.5</div>
               </div>
@@ -22,6 +38,7 @@ const Ayurveda = () => {
                   <div>Skills</div>
                   <div>Skills</div>
                 </div>
+                <h4>English</h4>
               </div>
             </div>
             <div className="bottom">
@@ -29,8 +46,54 @@ const Ayurveda = () => {
               <button className="call-btn">Call</button>
             </div>
           </div>
-          <div className="card"></div>
-          <div className="card"></div>
+          {/* card */}
+          <div className="card">
+            <div className="top">
+              <div className="left">
+                <div className="img-cont">
+                  <img src="./images/expert.png" alt="image" />
+                </div>
+                <div className="rating">4.5</div>
+              </div>
+              <div className="right">
+                <h3>Name</h3>
+                <div className="skills">
+                  <div>Skills</div>
+                  <div>Skills</div>
+                  <div>Skills</div>
+                </div>
+                <h4>English</h4>
+              </div>
+            </div>
+            <div className="bottom">
+              <div className="exp">Exp: 20 Yrs.</div>
+              <button className="call-btn">Call</button>
+            </div>
+          </div>
+          {/* card */}
+          <div className="card">
+            <div className="top">
+              <div className="left">
+                <div className="img-cont">
+                  <img src="./images/expert.png" alt="image" />
+                </div>
+                <div className="rating">4.5</div>
+              </div>
+              <div className="right">
+                <h3>Name</h3>
+                <div className="skills">
+                  <div>Skills</div>
+                  <div>Skills</div>
+                  <div>Skills</div>
+                </div>
+                <h4>English</h4>
+              </div>
+            </div>
+            <div className="bottom">
+              <div className="exp">Exp: 20 Yrs.</div>
+              <button className="call-btn">Call</button>
+            </div>
+          </div>
         </div>
       </div>
     </>

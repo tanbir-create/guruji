@@ -110,34 +110,33 @@ class Cards extends PureComponent {
                 background: "#E6F5E9",
               }}
             >
-              <div className="card-container">
-                <div className="img-container">
-                  <img src={astro} />
-                </div>
-                <div className="text-container">
-                  <div className="top">
-                    <span>
-                      Date:
-                      {new Date(
-                        this.state.orgtableData[i].createdAt
-                      ).toLocaleDateString()}
-                    </span>
-                    <span>{this.props.data[i].category}</span>
+              <Link to={`/topic/${this.props.data[i]._id}`}>
+                <div className="card-container">
+                  <div className="img-container">
+                    <img src={astro} />
                   </div>
-                  <div className="bottom">
-                    <h4>{this.props.data[i].title}</h4>
-                    <p>
-                      {this.props.data[i].description.substring(0, 50)}
-                      ...
-                    </p>
+                  <div className="text-container">
+                    <div className="top">
+                      <span>
+                        Date:
+                        {new Date(
+                          this.state.orgtableData[i].createdAt
+                        ).toLocaleDateString()}
+                      </span>
+                      <span>{this.props.data[i].category}</span>
+                    </div>
+                    <div className="bottom">
+                      <h4>{this.props.data[i].title}</h4>
+                      <p>
+                        {this.props.data[i].description.substring(0, 50)}
+                        ...
+                      </p>
+                    </div>
                   </div>
-                  {/* <Link to={`/topic/${this.state.orgtableData[i]._id}`}>
-                    <div>Read More</div>
-                  </Link> */}
                 </div>
-              </div>
+              </Link>
               <Link
-                to={`/topic/${this.state.orgtableData[i]._id}`}
+                to={`/topic/${this.props.data[i]._id}`}
                 style={{ textAlign: "end" }}
               >
                 <div

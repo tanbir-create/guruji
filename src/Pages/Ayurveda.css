@@ -13,6 +13,15 @@
   width: 100%;
   height: 150px;
   background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ayurveda-container .search-filter-container div {
+  width: 40px;
+  height: 40px;
+  background-color: aqua;
 }
 
 .ayurveda-container .doc-profile-container {
@@ -65,13 +74,40 @@
   margin-bottom: 10px;
 }
 
+.ayurveda-container .doc-profile-container .card .top .left .img-cont img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
 .ayurveda-container .doc-profile-container .card .top .right {
   width: 77%;
   background-color: red;
+  margin-left: 5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.ayurveda-container .doc-profile-container .card .top .right h3 {
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.ayurveda-container .doc-profile-container .card .top .right .skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: yellow;
+  margin-bottom: -5px;
+}
+
+.ayurveda-container .doc-profile-container .card .top .right .skills div {
+  padding: 3px 10px;
+  background-color: green;
+  border-radius: 18px;
+  margin-right: 2px;
 }
 
 .ayurveda-container .doc-profile-container .card .bottom {

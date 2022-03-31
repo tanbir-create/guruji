@@ -6,21 +6,22 @@ const Ayurveda = () => {
     <>
       <div className="ayurveda-container">
         <div className="search-filter-container">
-          <div>
+          <div className="sort-container">
             <select className="sorting">
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
-              <option></option>
+              <option>Sort By :</option>
+              <option>Popularity</option>
+              <option>Experience : High to Low</option>
+              <option>Experience : Low to High</option>
+              <option>Total orders : High to Low</option>
+              <option>Total orders : Low to High</option>
+              <option>Price : High to Low</option>
+              <option>Price : Low to High</option>
+              <option>Rating : High to Low</option>
             </select>
           </div>
           <div>ki</div>
           <div>jj</div>
-        </div>
+        </div>s
         <div className="doc-profile-container">
           {/* card */}
           <div className="card">

@@ -113,7 +113,7 @@ class Cards extends PureComponent {
               <Link to={`/topic/${this.props.data[i]._id}`}>
                 <div className="card-container">
                   <div className="img-container">
-                    <img src={astro} />
+                    <img src={this.props.data[i].image} alt="image" />
                   </div>
                   <div className="text-container">
                     <div className="top">

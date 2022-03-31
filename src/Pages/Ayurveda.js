@@ -21,7 +21,8 @@ const Ayurveda = () => {
           </div>
           <div>ki</div>
           <div>jj</div>
-        </div>s
+        </div>
+        s
         <div className="doc-profile-container">
           {/* card */}
           <div className="card">
